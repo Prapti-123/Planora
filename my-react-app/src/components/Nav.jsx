@@ -15,7 +15,7 @@ const Nav = () => {
           <a href="#" className="text-gray-600 hover:text-gray-900">USD</a>
           <a href="#" className="text-gray-600 hover:text-gray-900">Sign in</a>
           <button className="px-6 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600">
-            Sign up
+            Login
           </button>
         </div>
       </nav>
