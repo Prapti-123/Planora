@@ -31,7 +31,7 @@ const Signup = () => {
               />
             </div>
 
-            {/* Email Inporange
+            {/* Email Input */}
             <div className="relative">
               <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-orange-500" />
               <input
@@ -101,7 +101,7 @@ const Signup = () => {
             <p className="text-center text-sm text-gray-600 mt-6">
               Already have an account?{' '}
               <a href="#" className="text-yellow-600 font-semibold hover:text-orange-500">
-                Login Up
+                Log in
               </a>
             </p>
           </div>
