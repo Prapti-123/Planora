@@ -1,9 +1,10 @@
 import React from 'react'
 import { Search, Globe, Award, Headphones } from 'lucide-react';
+import { Link } from 'react-router-dom'
 const Nav = () => {
   return (
     <>
-    {/* Navigation */}
+      {/* Navigation */}
       <nav className="flex items-center justify-between px-8 py-4 bg-white shadow-sm">
         <div className="flex items-center space-x-2">
           <Globe className="w-8 h-8 text-orange-500" />
@@ -13,13 +14,13 @@ const Nav = () => {
           <a href="#" className="text-gray-600 hover:text-gray-900">Destinations</a>
           <a href="#" className="text-gray-600 hover:text-gray-900">Activities</a>
           <a href="#" className="text-gray-600 hover:text-gray-900">USD</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">Sign up</a>
-          <button className="px-6 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600">
+          <Link to="/signup" className="text-gray-600 hover:text-gray-900">Sign up</Link>
+          <Link to="/login" className="px-6 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600">
             Login
-          </button>
+          </Link>
         </div>
       </nav>
-      </>
+    </>
   )
 }
 
