@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const tripRequestSchema = new mongoose.Schema({
 
@@ -29,6 +29,7 @@ const tripRequestSchema = new mongoose.Schema({
     },
     tripType: {
         type: String,
+        enum: ["Family", "Friends", "Couple"],
         required: true
     },
     budget: {
@@ -36,16 +37,18 @@ const tripRequestSchema = new mongoose.Schema({
         required: true
     },
 
-    travelers: {
+    totalMembers: {
         type: Number,
         required: true
     },
     stayPreferences: {
         type: String,
+        enum: ["3 star hotel", "5 star hotel", "budget"],
         required: true
     },
     travelPreferences: {
         type: String,
+        enum: ["bus", "train", "flight", "own"],
         required: true
     },
     createdAt: {
@@ -54,5 +57,5 @@ const tripRequestSchema = new mongoose.Schema({
     }
 })
     const TripRequest = mongoose.model("TripRequest", tripRequestSchema);
-    export default TripRequest;     
+    module.exports = TripRequest;   
     

@@ -1,12 +1,11 @@
-import mongoose from "mongoose";
-import { use } from "react";
+const mongoose = require("mongoose");
 const bookingSchema = new mongoose.Schema({
     userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true
     },
-  
+
     itineraryId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Itinerary",
@@ -32,5 +31,5 @@ const bookingSchema = new mongoose.Schema({
     
 })
 const Booking = mongoose.model("Booking", bookingSchema);
-export default Booking;
+module.exports = Booking;
     
