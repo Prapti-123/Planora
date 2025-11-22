@@ -5,6 +5,7 @@ const connectDB = require("./config/db.js");
 const testRoutes = require("./routes/testRoutes.js");
 const userRoutes = require("./routes/UserRoutes.js");
 const cookieParser = require("cookie-parser");
+const tripRequestRoutes = require("./routes/TripRequestRoutes.js");
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/test",testRoutes);
 app.use("/api/users",userRoutes);
+app.use("/api/trip", tripRequestRoutes);
 
 
 
