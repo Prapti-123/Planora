@@ -201,7 +201,7 @@ const Login = () => {
         
         <div className="relative z-10 text-center">
           <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-3xl p-12 mb-8">
-            <h2 className="text-5xl font-bold text-white mb-4">
+            <h2 className="text-5xl font-bold text-black mb-4">
               Very good<br />
               plans are<br />
               waiting for<br />

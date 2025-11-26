@@ -18,44 +18,43 @@ export default function HomePage() {
           <p className="text-xl mb-8">From local escapes to far-flung adventures, find what makes you happy anytime, anywhere</p>
           
           {/* Search Box */}
-          <div className="bg-white rounded-lg shadow-xl p-6 flex items-end space-x-4 text-gray-800">
-            <div className="flex flex-col">
-              <label className="text-sm text-gray-600 mb-2">Where</label>
-              <input 
-                type="text" 
-                placeholder="Beach destination" 
-                className="border-b-2 border-gray-300 focus:border-orange-500 outline-none pb-2 w-48"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label className="text-sm text-gray-600 mb-2">When</label>
-              <input 
-                type="text" 
-                placeholder="February 05 - March 14" 
-                className="border-b-2 border-gray-300 focus:border-orange-500 outline-none pb-2 w-48"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label className="text-sm text-gray-600 mb-2">Tour Type</label>
-              <select className="border-b-2 border-gray-300 focus:border-orange-500 outline-none pb-2 w-32">
-                <option>All tour</option>
-                <option>Adventure</option>
-                <option>Beach</option>
-                <option>Mountains</option>
-                <option>Cultural</option>
-              </select>
-            </div>
-            
-            <button className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 flex items-center">
-              <Link to="/requirementpage"></Link>
-              <Search className="w-5 h-5 mr-2" />
-              Search
-            </button>
-          </div>
-        </div>
-      </div>
+                <div className="bg-white rounded-lg shadow-xl p-6 flex items-end space-x-4 text-gray-800">
+                <div className="flex flex-col">
+                  <label className="text-sm text-gray-600 mb-2">Where</label>
+                  <input 
+                  type="text" 
+                  placeholder="Beach destination" 
+                  className="border-b-2 border-gray-300 focus:border-orange-500 outline-none pb-2 w-48"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <label className="text-sm text-gray-600 mb-2">When</label>
+                  <input 
+                  type="text" 
+                  placeholder="February 05 - March 14" 
+                  className="border-b-2 border-gray-300 focus:border-orange-500 outline-none pb-2 w-48"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <label className="text-sm text-gray-600 mb-2">Tour Type</label>
+                  <select className="border-b-2 border-gray-300 focus:border-orange-500 outline-none pb-2 w-32">
+                  <option>All tour</option>
+                  <option>Adventure</option>
+                  <option>Beach</option>
+                  <option>Mountains</option>
+                  <option>Cultural</option>
+                  </select>
+                </div>
+                
+                <Link to="/requirementpage" className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 flex items-center">
+                  <Search className="w-5 h-5 mr-2" />
+                  Search
+                </Link>
+                </div>
+              </div>
+              </div>
 
-      {/* Why Choose Section */}
+              {/* Why Choose Section */}
       <div className="max-w-6xl mx-auto py-16 px-8">
         <h2 className="text-3xl font-bold text-center mb-12">Why choose Tourz</h2>
         <div className="grid grid-cols-4 gap-8">
