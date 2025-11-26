@@ -45,16 +45,17 @@ const itinerarySchema = new mongoose.Schema({
         type: Number,
         required: true,
       },
+      title: {
+        type: String,
+        required: true,
+      },
       activities: [
         {
           type: String,
           required: true,
         },
       ],
-      descdescription: {
-        type: String,
-        required: true,
-      },
+     
     },
   ],
   hotelSuggestions: [

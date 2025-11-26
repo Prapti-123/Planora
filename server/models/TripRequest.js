@@ -44,13 +44,25 @@ const tripRequestSchema = new mongoose.Schema({
     },
     stayPreferences: {
         type: String,
-        enum: ["3 star hotel", "5 star hotel", "budget hotel","resort"],
+        enum: ["3 star hotel", "5 star hotel", "Budget hotel","Resort"],
         required: true
     },
     travelPreferences: {
         type: String,
-        enum: ["bus", "train", "flight", "own vehicle"],
+        enum: ["Bus", "Train", "Flight", "Own vehicle"],
         required: true
+    },
+    status: {
+        type: String,
+        enum: ["Processing", "Ready", "Failed"],
+        default: "Processing"
+    },
+    error: {
+        type: String
+    },
+    itineraryId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Itinerary"
     },
     createdAt: {
         type: Date,
