@@ -90,8 +90,9 @@ exports.loginUser = async (req, res) => {
     // 5️ Set JWT token in cookie
     res.cookie("token", token, {
       httpOnly: true,
-      secure: true,      // set true in production
-      sameSite: "none",  // for cross-origin cookie
+      secure: false,      // set true in production
+      sameSite: "lax",  // for cross-origin cookie
+      path: "/",
       maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
     });
 
@@ -125,6 +126,11 @@ exports.logoutUser = async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 }
+
+exports.checkAuth = async (req, res) => {
+   res.json({ loggedin: true, user: req.user });
+};
+
 
 // exports.testingProtectedRoute = async (req, res) => {
 //   try {

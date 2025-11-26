@@ -11,9 +11,9 @@ const Nav = () => {
           <span className="text-2xl font-bold text-gray-800">Planora</span>
         </div>
         <div className="flex items-center space-x-8">
-          <a href="#" className="text-gray-600 hover:text-gray-900">Destinations</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">Activities</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900">USD</a>
+          <Link to="/destinations" className="text-gray-600 hover:text-gray-900">Destinations</Link>
+          <Link to="/activities" className="text-gray-600 hover:text-gray-900">Activities</Link>
+          <Link to="/myplans" className="text-gray-600 hover:text-gray-900">My Plans</Link>
           <Link to="/signup" className="text-gray-600 hover:text-gray-900">Sign up</Link>
           <Link to="/login" className="px-6 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600">
             Login

@@ -13,13 +13,24 @@ dotenv.config();
 
 
 const app = express();
-app.use(cookieParser());
+
+app.use((req, res, next) => {
+  res.removeHeader("Access-Control-Allow-Origin");
+  res.header("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.header("Access-Control-Allow-Credentials", "true");
+  next();
+});
+
 app.use(cors({
     origin: "http://localhost:5173",
     credentials: true
 }));
-app.use(cors());
+
+
+app.use(cookieParser());
+
 app.use(express.json());
+
 
 connectDB();
 app.use(express.urlencoded({ extended: true }));

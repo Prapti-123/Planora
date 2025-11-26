@@ -9,87 +9,9 @@ export default function ResponsePage() {
     const {id} = useParams();
   
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setProgress(prev => {
-                if (prev >= 100) {
-                    clearInterval(interval);
-                    setTimeout(() => setLoading(false), 500);
-                    return 100;
-                }
-                return prev + 10;
-            });
-        }, 400);
+    
 
-        return () => clearInterval(interval);
-    }, []);
-
-    if (loading) {
-        return (
-            <div className="h-screen w-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-                <div className="relative">
-                    <div className="relative w-64 h-64">
-                        <svg className="w-full h-full" viewBox="0 0 100 100">
-                            <circle
-                                cx="50"
-                                cy="50"
-                                r="40"
-                                fill="none"
-                                stroke="#E5E7EB"
-                                strokeWidth="8"
-                            />
-                        </svg>
-
-                        <svg className="absolute top-0 left-0 w-full h-full animate-spin" viewBox="0 0 100 100">
-                            <circle
-                                cx="50"
-                                cy="50"
-                                r="40"
-                                fill="none"
-                                stroke="#8B5CF6"
-                                strokeWidth="8"
-                                strokeDasharray="80 251.2"
-                                strokeDashoffset="0"
-                                strokeLinecap="round"
-                                transform="rotate(-90 50 50)"
-                            />
-
-                            <circle
-                                cx="50"
-                                cy="50"
-                                r="40"
-                                fill="none"
-                                stroke="#C4B5FD"
-                                strokeWidth="8"
-                                strokeDasharray="60 251.2"
-                                strokeDashoffset="-140"
-                                strokeLinecap="round"
-                                transform="rotate(-90 50 50)"
-                            />
-                        </svg>
-
-                        <div className="absolute inset-0 flex items-center justify-center flex-col">
-                            <div className="text-center">
-                                <div className="text-4xl font-bold text-purple-600 mb-2">{progress}%</div>
-                                <div className="text-sm text-gray-600">Loading...</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="mt-8 text-center">
-                        <h2 className="text-2xl font-semibold text-gray-800 mb-2">Please Wait</h2>
-                        <p className="text-gray-600">Fetching data from AI...</p>
-
-                        <div className="flex justify-center gap-2 mt-4">
-                            <div className="w-2 h-2 bg-purple-600 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
-                            <div className="w-2 h-2 bg-purple-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                            <div className="w-2 h-2 bg-purple-600 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+   
 
     return (
         <div className="h-screen w-screen bg-gradient-to-br from-orange-50 via-red-50 to-orange-100 flex items-center justify-center p-8 overflow-auto">

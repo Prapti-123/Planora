@@ -2,7 +2,7 @@
 import React from 'react';
 import { Search, Globe, Award, Headphones } from 'lucide-react';
 import heroImage from '../assets/balint-miko-ebB8JOg2kYU-unsplash.jpg';
-
+import { Link } from "react-router-dom";
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -45,7 +45,9 @@ export default function HomePage() {
                 <option>Cultural</option>
               </select>
             </div>
+            
             <button className="px-8 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 flex items-center">
+              <Link to="/requirementpage"></Link>
               <Search className="w-5 h-5 mr-2" />
               Search
             </button>
