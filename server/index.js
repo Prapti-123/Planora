@@ -6,6 +6,7 @@ const testRoutes = require("./routes/testRoutes.js");
 const userRoutes = require("./routes/UserRoutes.js");
 const cookieParser = require("cookie-parser");
 const tripRequestRoutes = require("./routes/TripRequestRoutes.js");
+const itineraryRoutes = require("./routes/ItineraryRoutes.js");
 
 dotenv.config();
 
@@ -38,6 +39,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/test",testRoutes);
 app.use("/api/users",userRoutes);
 app.use("/api/trip", tripRequestRoutes);
+app.use("/api/itinerary",itineraryRoutes)
+
+
 
 
 
