@@ -1,28 +1,15 @@
 {
-    "name": "Planora",
-    "version": "1.0.0",
-    "private": true,
-    "type":"commonjs",
-    
-    "scripts": {
-      "install-client": "cd client && npm install",
-      "build-client": "cd client && npm run build",
-      "build": "npm run install-client && npm run build-client",
-      "start": "node server/index.js",
-      "dev": "concurrently \"npm run server\" \"npm run client\"",
-      "server": "nodemon server/index.js",
-      "client": "cd client && npm run dev"
-    },
-    "dependencies": {
-      "express": "^4.19.2",
-      "cors": "^2.8.5",
-      "dotenv": "^16.4.5"
-    },
-    "devDependencies": {
-      "nodemon": "^3.1.0",
-      "concurrently": "^8.2.2"
-    },
-    "engines": {
-      "node": ">=18"
-    }
+  "name": "planora",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "build-client": "cd client && npm run build",
+    "build": "npm run install-server && npm run install-client && npm run build-client",
+    "start": "node server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
   }
+}
