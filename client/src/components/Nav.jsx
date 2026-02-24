@@ -14,7 +14,7 @@ const Nav = () => {
 
   // Check if user is logged in (check for auth token/state)
   const checkLogin = () => {
-    // "http://localhost:5000/api/users/check-auth"
+    // "`${import.meta.env.VITE_API_URL}/api/users/check-auth"
     // Since we can't use localStorage, check your auth context/state here
     // For now, this is a placeholder - replace with your actual auth check
     // Example: const token = getAuthToken(); // from your auth context
@@ -26,7 +26,7 @@ const Nav = () => {
 
   // Logout handler
   const handleLogout = () => {
-    // "http://localhost:5000/api/users/logout"
+    // "`${import.meta.env.VITE_API_URL}/api/users/logout"
     // Clear authentication state
     // If using Context: clearAuth();
     // If using state management: dispatch(logout());
