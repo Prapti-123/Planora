@@ -3,7 +3,7 @@ const path = require("path");
 const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config({ path: "./server/.env" });
-const connectDB = require("./config/db.js");
+const connectDB = require("./config/db.js").default;
 const testRoutes = require("./routes/testRoutes.js");
 const userRoutes = require("./routes/UserRoutes.js");
 const cookieParser = require("cookie-parser");
