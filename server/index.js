@@ -17,7 +17,6 @@ const itineraryRoutes = require("./routes/ItineraryRoutes.js");
 
 const app = express();
 
-const __dirnameResolved =__dirname;
 
 // middleware
 const allowedOrigins = [
@@ -62,12 +61,12 @@ app.get("/api/hello", (req, res) => {
 });
 
 
-// static serve
-app.use(express.static(path.join(__dirnameResolved, "../client/dist")));
+const clientPath = path.join(process.cwd(), "client", "dist");
 
-// SPA fallback
-app.use((req, res) => {
-  res.sendFile(path.join(__dirnameResolved, "../client/dist/index.html"));
+app.use(express.static(clientPath));
+
+app.get("/{*any}", (req, res) => {
+  res.sendFile(path.join(clientPath, "index.html"));
 });
 
 
