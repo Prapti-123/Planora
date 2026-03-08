@@ -6,7 +6,7 @@ const ProtectedRoute = ({ children }) => {
   const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/users/check-auth`, {
+    fetch('/api/users/check-auth', {
       method: "GET",
       credentials: "include",
     })
